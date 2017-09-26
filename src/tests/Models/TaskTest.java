@@ -23,4 +23,13 @@ class TaskTest {
         });
     }
 
+    @Test
+    public void addTaskWithTitleOnlySpaces_throwsIllegalArgumentException() {
+        String taskName = "    ";
+
+        assertThrows(IllegalArgumentException.class, () -> {
+            Task task = new Task(taskName);
+        });
+    }
+
 }
