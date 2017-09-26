@@ -1,12 +1,10 @@
-package tests;
+package Models;
 
-
-import Models.Task;
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.assertEquals;
 
+import static org.junit.jupiter.api.Assertions.*;
 
-public class TaskTest {
+class TaskTest {
 
     @Test
     public void addNewTask_addsTitle() {
@@ -17,5 +15,3 @@ public class TaskTest {
     }
 
 }
-
-
