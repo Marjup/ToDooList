@@ -5,6 +5,7 @@ public class Task {
     private String title;
 
     public Task(String title) {
+        if (title.equals("")) throw new IllegalArgumentException();
         this.title = title;
     }
 

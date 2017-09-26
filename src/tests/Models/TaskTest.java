@@ -14,4 +14,13 @@ class TaskTest {
         assertEquals(task.getTitle(), taskName);
     }
 
+    @Test
+    public void addTaskWithEmptyTitle_throwsIllegalArgumentException() {
+        String taskName = "";
+
+        assertThrows(IllegalArgumentException.class, () -> {
+            Task task = new Task(taskName);
+        });
+    }
+
 }
