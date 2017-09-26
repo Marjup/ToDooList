@@ -41,4 +41,28 @@ class TaskTest {
         });
     }
 
+    @Test
+    public void addTaskWithTitleWithLeadingWhitespace_removesLeadingWhitespace() {
+        String taskName = "  Hello world!";
+        Task task = new Task(taskName);
+
+        assertEquals(task.getTitle(), "Hello world!");
+    }
+
+    @Test
+    public void addTaskWithTitleWithEndingWhitespace_removesEndingWhitespace() {
+        String taskName = "Hello world!   ";
+        Task task = new Task(taskName);
+
+        assertEquals(task.getTitle(), "Hello world!");
+    }
+
+    @Test
+    public void addTaskWithTitleWithWhitespaceAtStartAtEnd_removesWhitespaceAtStartAtEnd() {
+        String taskName = "   Hello world!   ";
+        Task task = new Task(taskName);
+
+        assertEquals(task.getTitle(), "Hello world!");
+    }
+
 }

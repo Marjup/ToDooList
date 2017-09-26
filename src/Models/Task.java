@@ -8,6 +8,7 @@ public class Task {
 
     public Task(String title) {
         if (StringUtils.isBlank(title)) throw new IllegalArgumentException();
+        title = StringUtils.strip(title);
 
         this.title = title;
     }
