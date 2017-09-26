@@ -32,4 +32,13 @@ class TaskTest {
         });
     }
 
+    @Test
+    public void addTaskWithNullTitle_throwsIllegalArgumentException() {
+        String taskName = null;
+
+        assertThrows(IllegalArgumentException.class, () -> {
+            Task task = new Task(taskName);
+        });
+    }
+
 }
